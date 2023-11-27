@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Pages\Account\" />
+    <None Remove="Pages\Admin\" />
+    <None Remove="Pages\article\" />
+    <None Remove="model\" />
+    <None Remove="Pages\community\" />
+    <None Remove="Pages\question\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Account\" />
+    <Folder Include="Pages\Admin\" />
+    <Folder Include="Pages\article\" />
+    <Folder Include="model\" />
+    <Folder Include="Pages\community\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\communityCover\" />
+    <Folder Include="wwwroot\articleCover\" />
+    <Folder Include="Pages\question\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.0" />
+    <PackageReference Include="BCrypt.Net" Version="0.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
+    <Content Remove="wwwroot\communityCover\" />
+    <Content Remove="wwwroot\articleCover\" />
+  </ItemGroup>
+</Project>

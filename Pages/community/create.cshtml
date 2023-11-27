@@ -1,0 +1,41 @@
+﻿@page
+@model final2.Pages.community.createModel
+@{
+}
+
+<div class="container mx-auto">
+    @if (Model.message.Length > 0)
+    {
+        <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
+            @Model.message
+        </div>
+    }
+    <form method="post" enctype="multipart/form-data" class="mt-4">
+        <div class="mb-4">
+            <label for="title" class="block text-gray-700">Community Name:</label>
+            <div class="rounded-lg w-full bg-white flex border
+                hover:outline hover:outline-2 hover:outline-outline-1
+
+                bg-foundation-input">
+                <input type="text" class="block w-full py-1 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" id="title" name="title" placeholder="Enter Community Name">
+            </div>
+            </div>
+            <div class="mb-4">
+                <label for="coverPhoto" class="block text-gray-700">Community Cover Photo:</label>
+                <input type="file" class="block w-full py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" id="coverPhoto" name="coverPhoto" placeholder="Choose Cover Photo">
+            </div>
+
+            <div class="mb-4">
+                <label for="goals" class="block text-gray-700">Community Goals:</label>
+                <div class="rounded-lg w-full bg-white flex border
+                hover:outline hover:outline-2 hover:outline-outline-1
+
+                bg-foundation-input">
+                    <textarea class="form-textarea mt-1 block w-full border-gray-300 rounded-md" id="goals" name="goals" placeholder="Enter goals"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Request Community Creation
+                </button>
+</form>
+</div>

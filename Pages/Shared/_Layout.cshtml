@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - final2</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/final2.styles.css" asp-append-version="true" />*@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({
+            selector: 'textarea#tiny',
+            plugins: [
+                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
+                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
+                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | a11ycheck casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify |' +
+                'bullist numlist checklist outdent indent | removeformat | code table help'
+        })</script>
+</head>
+<body>
+    <header>
+        <nav class="bg-white border-b-2 border-gray-300 shadow-sm">
+            <div class="container mx-auto flex items-center justify-between">
+                <a asp-area="" asp-page="/Index" class="flex items-center">
+                    <img src="~/images/logo1.png" alt="Logo" class="w-24 h-auto">
+                </a>
+                <button class="block sm:hidden border border-gray-400 rounded-md p-1 focus:outline-none">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6h16M4 12h16m-7 6h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="hidden sm:flex flex-grow items-center justify-end">
+                    <ul class="flex space-x-4">
+                        <li>
+                            <a asp-area="" asp-page="/article/create" class="text-gray-700 hover:text-gray-900">Write</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-page="/community/create" class="text-gray-700 hover:text-gray-900">Create Community</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-page="/question/create" class="text-gray-700 hover:text-gray-900">Ask</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-page="/account/login" class="text-gray-700 hover:text-gray-900">Login</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-page="/account/register" class="text-gray-700 hover:text-gray-900">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - final2 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

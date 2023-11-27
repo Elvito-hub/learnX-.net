@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "0F0C8Tgj8/XZVw9PAYhoZ0SH1UgPeEqHsTsKMQ3T+YinoS86TI38UOL+MJBEpxwa7AdjCaFVrIxYpctnA1jV8g==",
+  "success": true,
+  "projectFilePath": "/Users/elvisgasana/projects/final2/final2/final2.csproj",
+  "expectedPackageFiles": [
+    "/Users/elvisgasana/.nuget/packages/bcrypt.net/0.1.0/bcrypt.net.0.1.0.nupkg.sha512",
+    "/Users/elvisgasana/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/elvisgasana/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/elvisgasana/.nuget/packages/npgsql/8.0.0/npgsql.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BCrypt.Net 0.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BCrypt.Net",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}
